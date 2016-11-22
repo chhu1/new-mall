@@ -6,12 +6,12 @@ import banner from './pages/Banner'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  mode: 'history',
-  base: __dirname,
-  routes: [
-    { name: 'index', path: '/', component: index },
-    { name: 'banner', path: '/banner', component: banner }
-  ]
+    mode: 'history',
+    base: __dirname,
+    routes: [
+        { name: 'index', path: '/', component: index },
+        { name: 'banner', path: '/banner', component: banner }
+    ]
 })
 
 export default router

@@ -3,6 +3,6 @@ import App from './App'
 import router from './router'
 
 new Vue({
-  router,
-  ...App
+    router,
+    ...App
 }).$mount('#app')

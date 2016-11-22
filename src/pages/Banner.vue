@@ -1,3 +1,3 @@
 <template lang="jade">
-  h2 Banner
+    h2 Banner
 </template>

@@ -1,3 +1,3 @@
 <template lang="jade">
-  h2 Index
+    h2 Index
 </template>
