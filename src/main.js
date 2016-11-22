@@ -1,8 +1,12 @@
 import Vue from 'vue'
-import App from './App'
+import store from './store'
 import router from './router'
+import App from './app/containers/App'
+
+import './vendor/flexible'
 
 new Vue({
+    store,
     router,
     ...App
 }).$mount('#app')
