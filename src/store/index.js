@@ -7,12 +7,24 @@ import * as getters from './getters'
 
 Vue.use(Vuex)
 
-const debug = process.env.NODE_ENV !== 'production'
-export default new Vuex.Store({
+const store = new Vuex.Store({
     actions,
     getters,
     modules: {
         loading
     },
-    strict: debug
+    strict: process.env.NODE_ENV !== 'production'
 })
+
+if (module.hot) {
+    module.hot.accept(['./modules/loading'], () => {
+        const loading = require('./modules/loading').default
+        store.hotUpdate({
+            modules: {
+                loading
+            }
+        })
+    })
+}
+
+export default store
