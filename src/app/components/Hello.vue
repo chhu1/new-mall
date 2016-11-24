@@ -29,6 +29,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '../../static/stylus/base'
 h1, h2
     font-weight normal
 ul

@@ -1,1 +1,1 @@
-export const showLoading = state => state.common.showLoading
+export const isLonding = state => state.loading.isLonding

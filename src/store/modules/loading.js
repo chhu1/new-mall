@@ -1,15 +1,15 @@
 import { SHOW_LOADING, HIDE_LOADING } from '../actions'
 
 const state = {
-    showLoading: false
+    isLonding: false
 }
 
 const mutations = {
     [SHOW_LOADING](state) {
-        state.showLoading = true
+        state.isLonding = true
     },
     [HIDE_LOADING](state) {
-        state.showLoading = false
+        state.isLonding = false
     }
 }
 

@@ -7,7 +7,6 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
     mode: 'history',
-    base: __dirname,
     routes: [
         { name: 'index', path: '/', component: index },
         { name: 'banner', path: '/banner', component: banner }

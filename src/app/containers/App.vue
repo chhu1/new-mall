@@ -1,28 +1,42 @@
-<template>
-    <div id="app">
-        <img src="../../assets/logo.png">
-        <hello></hello>
-        <router-view class="router"></router-view>
-    </div>
+<template lang="jade">
+    #app
+        img(src="../../static/images/logo.png")
+        Hello
+        Loading(:showLoading="isLonding")
+        router-view(class="router")
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import Hello from '../components/Hello'
+import Loading from '../components/Loading'
+
 export default {
     name: 'app',
     components: {
-        Hello
+        Hello,
+        Loading
+    },
+    created() {
+        this.showLoading()
+        setTimeout(function() {
+            this.hideLoading()
+        }.bind(this), 5000)
+    },
+    computed: {
+        ...mapGetters(['isLonding'])
+    },
+    methods: {
+        ...mapActions(['showLoading', 'hideLoading'])
     }
 }
 </script>
 
-<style>
-#app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-}
+<style lang="stylus">
+@import '../../static/stylus/base'
+#app
+    text-align center
+    color colFontBlack
+    margin-top pxRem(120)
+    font-family "Microsoft YaHei", Arial, Helvetica, sans-serif
 </style>
