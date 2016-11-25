@@ -13,12 +13,13 @@ Vue.http.interceptors.push((request, next) => {
     let userId = getCookieValue('userId')
     let userToken = getCookieValue('userToken')
     if (userId && userToken) {
-        request.headers.userId = userId.replace(/(^\")|(\"$)/g, '')
-        request.headers.userToken = userToken.replace(/(^\")|(\"$)/g, '')
+        request.headers.userId = userId.replace(/(^")|("$)/g, '')
+        request.headers.userToken = userToken.replace(/(^")|("$)/g, '')
     }
     next((response) => {
         return response
     })
 })
 
-export const userResource = Vue.resource(apiDomain + 'user{/event}')
+const serverDomain = process.env.NODE_ENV !== 'production' ? '' : apiDomain
+export const userResource = Vue.resource(serverDomain + '/user{/event}')

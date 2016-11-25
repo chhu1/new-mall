@@ -1,7 +1,7 @@
 export function getCookieValue(name) {
     let value = `; ${document.cookie}`
     let parts = value.split(`; ${name}=`)
-    return parts.length != 2 ? null : parts.pop().split(";").shift()
+    return parts.length !== 2 ? null : parts.pop().split(';').shift()
 }
 
 export function setCookie(key, value, hours = 7 * 24) {

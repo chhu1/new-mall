@@ -1,7 +1,4 @@
 const config = {
-    dev: {
-        apiDomain: 'http://192.168.0.106:3000'
-    },
     ppe: {
         apiDomain: 'http://ppe.api.server.com'
     },
@@ -10,7 +7,7 @@ const config = {
     }
 }
 
-let env = config['dev']
+let env = config['ppe']
 const apiDomain = env.apiDomain
 
 export { apiDomain }
