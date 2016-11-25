@@ -1,12 +1,12 @@
 <template lang="jade">
-    div(class="loading" v-show="showLoading")
+    div(class="loading" v-show="isLonding")
 </template>
 
 <script>
 export default {
     name: 'loading',
     props: {
-        showLoading: {
+        isLonding: {
             type: Boolean,
             default: false
         }
