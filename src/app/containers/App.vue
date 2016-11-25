@@ -2,8 +2,9 @@
     #app
         img(src="../../static/images/logo.png")
         Hello
-        Loading(:showLoading="isLonding")
-        router-view(class="router")
+        Loading(:isLonding="isLonding")
+        keep-alive
+            router-view(class="router")
 </template>
 
 <script>
@@ -32,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 @import '../../static/stylus/base'
 #app
     text-align center
