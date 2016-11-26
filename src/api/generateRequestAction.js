@@ -18,7 +18,7 @@ const generateRequestAction = ({ commit }, options) => {
 
     const apiWithPromise = (obj) => {
         return new Promise((resolve, reject) => {
-            request(obj).then(response => resolve(response), response => reject(response))
+            request(obj).then(response => resolve(response.body), response => reject(response))
         })
     }
 
