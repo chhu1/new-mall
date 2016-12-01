@@ -22,7 +22,7 @@ const generateRequestAction = ({ commit }, options) => {
         })
     }
 
-    (async(commit) => {
+    (async() => {
         try {
             commit(REQUEST_TYPE)
             beforeRequest && beforeRequest({ commit })
@@ -35,7 +35,7 @@ const generateRequestAction = ({ commit }, options) => {
         } finally {
             finishRequest && finishRequest({ commit })
         }
-    })(commit)
+    })()
 }
 
 export default generateRequestAction
