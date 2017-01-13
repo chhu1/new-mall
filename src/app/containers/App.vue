@@ -20,9 +20,9 @@ export default {
     },
     created() {
         this.showLoading()
-        setTimeout(function() {
-            this.hideLoading()
-        }.bind(this), 5000)
+        // setTimeout(function() {
+        //     this.hideLoading()
+        // }.bind(this), 5000)
     },
     computed: {
         ...mapGetters(['isLonding'])

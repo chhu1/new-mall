@@ -19,12 +19,12 @@ export default {
 .loading
     top 50%
     left 50%
-    width pxRem(150)
-    height pxRem(120)
     z-index 9999
     position fixed
-    margin pxRem(-75) pxRem(-60)
+    width pxRem(150)
+    height pxRem(120)
     border-radius pxRem(12)
+    margin pxRem(-75) pxRem(-60)
     background rgba(0, 0, 0, 0.6)
     &:after
         top 50%
@@ -32,13 +32,11 @@ export default {
         content ''
         width pxRem(40)
         height pxRem(40)
-        position absolute
         margin pxRem(-20)
+        position absolute
         background url('../../static/images/loading.png') center center no-repeat
         background-size pxRem(40) pxRem(40)
-        -webkit-animation loadingplay 0.8s linear infinite
         animation loadingplay 0.8s linear infinite
-        -webkit-transform translate3d(0, 0, 0)
         transform translate3d(0, 0, 0)
 
 @keyframes loadingplay {
@@ -47,15 +45,6 @@ export default {
     }
     100% {
         transform rotate(360deg)
-    }
-}
-
-@-webkit-keyframes loadingplay {
-    0% {
-        -webkit-transform rotate(0)
-    }
-    100% {
-        -webkit-transform rotate(360deg)
     }
 }
 </style>
