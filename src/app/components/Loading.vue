@@ -1,5 +1,5 @@
 <template lang="jade">
-    div(class="loading" v-show="isLonding")
+div(class="loading" v-show="isLonding")
 </template>
 
 <script>

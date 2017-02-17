@@ -1,3 +1,6 @@
 <template lang="jade">
-    h2 Banner
+.div
 </template>
+
+<style>
+</style>
